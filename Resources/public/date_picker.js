@@ -1,4 +1,4 @@
-stnw_data_picker = function(){
+stnw_date_picker = function(){
     var locale = "";
     return{
         initLocale : function(){
@@ -19,15 +19,17 @@ stnw_data_picker = function(){
         },
         initDatePicker : function(){
 
-            if($.datepicker.regional[stnw_data_picker.getLocale(4)] != undefined ){
-                $.datepicker.setDefaults( $.datepicker.regional[stnw_data_picker.getLocale(4)] );
-            }else if($.datepicker.regional[stnw_data_picker.getLocale(2)] != undefined){
-                $.datepicker.setDefaults( $.datepicker.regional[stnw_data_picker.getLocale(2) ] );
+            if($.datepicker.regional[stnw_date_picker.getLocale(4)] != undefined ){
+                $.datepicker.setDefaults( $.datepicker.regional[stnw_date_picker.getLocale(4)] );
+            }else if($.datepicker.regional[stnw_date_picker.getLocale(2)] != undefined){
+                $.datepicker.setDefaults( $.datepicker.regional[stnw_date_picker.getLocale(2) ] );
             }else{
                 $.datepicker.setDefaults( $.datepicker.regional['']);
             }
 
-            $('.sonataadmin_date_picker').each(function(){
+            $('.stnw_date_picker').each(function(){
+
+
                 var id_input=this.id.split('_datepicker')[0];
                 var sfInput = $('#'+id_input)[0];
                 if(! (sfInput)){
@@ -60,6 +62,6 @@ stnw_data_picker = function(){
     }}()
 
 $(document).ready(function(){
-    stnw_data_picker.initLocale();
-    stnw_data_picker.initDatePicker();
+    stnw_date_picker.initLocale();
+    stnw_date_picker.initDatePicker();
 });
