@@ -1,0 +1,23 @@
+{
+    "name": "stnw/date-picker-bundle",
+    "description": "DatePicker and DateTimePicker field type for Symfony2 and SonataAdminBundle.",
+    "type": "symfony-bundle",
+    "authors": [
+        {
+            "email": "studenikin.s@gmail.com",
+            "name": "Sergey Studenikin"
+        }
+    ],
+    "keywords":["DateTimePicker", "DatePicker", "Picker", "FormType", "DatePickerType", "DateTymePickerType"],
+
+    "require": {
+        "symfony/framework-bundle": ">=v2.4.0"
+    },
+
+    "autoload": {
+        "psr-0": {
+            "Stnw\\DatePickerBundle": ""
+        }
+    },
+    "target-dir": "Stnw/DatePickerBundle"
+}

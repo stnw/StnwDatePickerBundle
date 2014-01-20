@@ -1,0 +1,10 @@
+services:
+  form.type.datePicker:
+    class: Stnw\DatePickerBundle\Form\Type\DatePickerType
+    tags:
+      - { name: form.type, alias: datePicker }
+
+  form.type.dateTimePicker:
+      class: Stnw\DatePickerBundle\Form\Type\DateTimePickerType
+      tags:
+        - { name: form.type, alias: dateTimePicker }
