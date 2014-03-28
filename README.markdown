@@ -31,7 +31,7 @@ public function registerBundles()
 {
     $bundles = array(
         // ...
-        new Stnw\DatePickerBundle\StnwSonataAdminDatePickerBundle(),
+        new Stnw\DatePickerBundle\StnwDatePickerBundle(),
     );
 }
 ```
