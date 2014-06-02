@@ -1,19 +1,27 @@
 {% block datePicker_widget %}
     {% spaceless %}
-
         <input type="text" {{ block('widget_attributes') }} {% if value is not empty %}value="{{ value }}" {% endif %}/>
         {%  set attr = attr|merge({'class': ((attr.class|default('') ~ ' stnw_date_picker')|trim)}) %}
         {% set  id = id ~ "_datepicker" %}
         {% set  full_name = "datepicker_" ~ full_name  %}
         <input type="text" {{ block('widget_attributes') }}/>
-
     {% endspaceless %}
 {% endblock datePicker_widget %}
 
 
+{% block filterDatePicker_widget %}
+    {% spaceless %}
+        <input type="text" {{ block('widget_attributes') }} {% if value is not empty %}value="{{ value }}" {% endif %}/>
+        {%  set attr = attr|merge({'class': ((attr.class|default('') ~ ' stnw_date_filter_picker')|trim)}) %}
+        {% set  id = id ~ "_filter_datepicker" %}
+        {% set  full_name = "filterdatepicker_" ~ full_name  %}
+        <input type="text" {{ block('widget_attributes') }}/>
+    {% endspaceless %}
+{% endblock filterDatePicker_widget %}
+
+
 {% block dateTimePicker_widget %}
     {% set attr = attr|merge({'class': (attr.class|default('') ~ ' stnw_datetime_picker')|trim}) %}
-
     {{ form_errors(form.date) }}
     {{ form_errors(form.time) }}
     {{ form_widget(form.date) }}

@@ -4,7 +4,30 @@ services:
     tags:
       - { name: form.type, alias: datePicker }
 
+  form.type.filterDatePicker:
+      class: Stnw\DatePickerBundle\Form\Type\FilterDatePickerType
+      arguments: [@translator]
+      tags:
+        - { name: form.type, alias: filterDatePicker }
+
+  form.type.filterDatePickerStnw:
+      class: Stnw\DatePickerBundle\Form\Type\FilterDateTimePickerType
+      arguments: [@translator]
+      tags:
+        - { name: form.type, alias: filterDateTimePicker }
+
   form.type.dateTimePicker:
       class: Stnw\DatePickerBundle\Form\Type\DateTimePickerType
       tags:
         - { name: form.type, alias: dateTimePicker }
+
+
+  stnw.admin.orm.filter.type.date:
+      class: Stnw\DatePickerBundle\Filter\DateFilter
+      tags:
+        - { name: sonata.admin.filter.type, alias: stnw_date_filter }
+
+  stnw.admin.orm.filter.type.date_time:
+      class: Stnw\DatePickerBundle\Filter\DateTimeFilter
+      tags:
+        - { name: sonata.admin.filter.type, alias: stnw_date_time_filter }

@@ -89,3 +89,15 @@ FormFields
         ;
     }
 ```
+
+DatagridFilters:
+``` php
+<?php
+    protected function configureDatagridFilters(DatagridMapper $datagrid)
+    {
+        $datagrid
+            ->add('startDate', 'stnw_date_filter')
+            ->add('endDateTime', 'stnw_date_time_filter')
+        ;
+    }
+```
