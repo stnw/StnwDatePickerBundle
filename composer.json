@@ -11,7 +11,7 @@
     "keywords":["DateTimePicker", "DatePicker", "Picker", "FormType", "DatePickerType", "DateTymePickerType"],
 
     "require": {
-        "symfony/framework-bundle": ">=v2.4.0"
+        "symfony/framework-bundle": ">=v2.3.0"
     },
 
     "autoload": {
