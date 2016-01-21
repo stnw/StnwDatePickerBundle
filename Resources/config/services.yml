@@ -6,13 +6,13 @@ services:
 
   form.type.filterDatePicker:
       class: Stnw\DatePickerBundle\Form\Type\FilterDatePickerType
-      arguments: [@translator]
+      arguments: ["@translator"]
       tags:
         - { name: form.type, alias: filterDatePicker }
 
   form.type.filterDatePickerStnw:
       class: Stnw\DatePickerBundle\Form\Type\FilterDateTimePickerType
-      arguments: [@translator]
+      arguments: ["@translator"]
       tags:
         - { name: form.type, alias: filterDateTimePicker }
 
